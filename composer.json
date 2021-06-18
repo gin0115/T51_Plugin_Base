@@ -1,0 +1,20 @@
+{
+    "name": "team51/project",
+    "type": "library",
+    "description": "This is used for local dev work and shared",
+    "keywords": [],
+    "homepage": "https://pinkcrab.co.uk",
+    "license": "GPL",
+    "require-dev": {
+        "symfony/var-dumper": "4.*",
+        "phpstan/phpstan": "^0.12.6",
+        "szepeviktor/phpstan-wordpress": "^0.7.2",
+        "php-stubs/wordpress-stubs": "^5.6.0"
+    },
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse * -l8"
+    }
+}

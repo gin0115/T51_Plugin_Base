@@ -1,0 +1,19 @@
+# Start command: composer update --classmap-authoritative && vendor/bin/phpstan analyze
+
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+parameters:
+    level: max
+    inferPrivatePropertyTypeFromConstructor: true
+    paths:
+        - %currentWorkingDirectory%/*
+    excludes_analyse:
+        - %currentWorkingDirectory%/vendor/*
+    bootstrapFiles:
+        - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+    ignoreErrors:
+        # Examples of ignoring errors.
+        #- '#Function Sensei not found\.#'
+        #- '#Parameter \$instance of method [a-zA-Z0-9\\_]+Learner_Management::insert_progress_column\(\) has invalid typehint type Sensei_Learners_Main#'
+        #- '#Call to static method user_completed_lesson\(\) on an unknown class Sensei_Utils.#'
