@@ -1,0 +1,4 @@
+composer.json
+phpstan.neon.dist
+vendor/
+composer.lock
